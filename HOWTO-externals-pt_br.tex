@@ -3,7 +3,7 @@
 \documentclass[12pt, a4paper,english,titlepage]{article}  
 
 %% HOWTO write an external for pd
-%% Copyright (c) 2001-2006 by IOhannes m zmˆlnig
+%% Copyright (c) 2001-2006 by IOhannes m zm√∂lnig
 %%
 %%  Permission is granted to copy, distribute and/or modify this document
 %%  under the terms of the GNU Free Documentation License, Version 1.2
@@ -22,7 +22,7 @@ para {\em Pure Data}
 }
 
 \author{
-johannes m zmˆlnig \\
+johannes m zm√∂lnig \\
 \\
 {\em institute of electronic music and acoustics\footnote{http://iem.at}}
 \\
@@ -35,15 +35,15 @@ johannes m zmˆlnig \\
 \maketitle
 
 \begin{abstract}
-Pd È um sistema gr·fico de composiÁ„o musical por computador em tempo real que segue
+Pd √© um sistema gr√°fico de composi√ß√£o musical por computador em tempo real que segue
 os tradicionais IRCAMs {\em ISPW-max}
 
-Embora muitas funcionalidades s„o construÌdas dentro do Pd,
-algumas vezes È difÌcil ou impossÌvel criar um patch com uma certa funcionalidade
-fora das primitivas e suas combinaÁıes.
+Embora muitas funcionalidades s√£o constru√≠das dentro do Pd,
+algumas vezes √© dif√≠cil ou imposs√≠vel criar um patch com uma certa funcionalidade
+fora das primitivas e suas combina√ß√µes.
 
 Entretanto, Pd pode ser expandido com primitivas (``objetos'')
-escritos em linguagens de programaÁ„o complexas, como {\tt C/C++}. 
+escritos em linguagens de programa√ß√£o complexas, como {\tt C/C++}. 
 
 Este documento tenta explicar como construir tais primitivas em  {\tt C},
 a linguagem popular utilizada para criar o Pd.
@@ -58,17 +58,19 @@ a linguagem popular utilizada para criar o Pd.
 \vfill
 \newpage
 
-\section{definitions and prerequisites}
-Pd refers to the graphical real-time computer-music environment {\em Pure Data}
-by Miller~S.~Puckette.
+\section{defini√ß√µes e pr√©-requisitos}
+Pd refere-se ao ambiente gr√°fico de computa√ß√£o musical em tempo-real criado por
+Miller~.S.~Puckette.
 
-To fully understand this document, it is necessary to
-be acquainted with Pd and to 
-have a general understanding of programming techniques especially in {\tt C}.
+Para entender completamente esse documento, √© necess√°rio ser
+familiarizado com Pd e ter um entendimento geral de t√©cnicas de  programa√ß√£o 
+especialmente em {\tt C}.
 
-To write externals yourself, a {\tt C}-compiler that supports the
-{\tt ANSI-C}-Standard, like the {\em Gnu C-compiler} (gcc) on linux-systems or
-{\em Visual-C++} on windos-plattforms, will be necessary.
+Para escrever externals por conta pr√≥pria,ser√° necessa≈ïio um compilador {\tt C} que tenha 
+suporte ao padr√£o {\tt ANSI-C},  como no {\em Gnu C-compiler} (gcc) nos sistemas
+linux ou {\em Visual-C++} em plataformas windows.
+
+
 
 \subsection{classes, instances, objects}
 Pd is written in the programming-language {\tt C}.
